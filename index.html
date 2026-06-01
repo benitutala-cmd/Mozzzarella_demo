@@ -1,93 +1,257 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Mozzarella Pizzeria</title>
 
 <style>
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
 font-family:Arial,sans-serif;
 background:#111;
 color:white;
-text-align:center;
+}
+
+header{
+background:white;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:32px;
+font-weight:bold;
+color:#d62828;
+}
+
+nav a{
+margin:0 15px;
+text-decoration:none;
+color:black;
+font-weight:bold;
 }
 
 .hero{
-background:url('https://images.unsplash.com/photo-1513104890138-7c749659a591');
-background-size:cover;
-background-position:center;
-padding:120px 20px;
+background:url('https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1600') center/cover;
+min-height:600px;
+display:flex;
+align-items:center;
+padding:60px;
 }
 
-h1{
-font-size:50px;
-margin:0;
+.hero-content{
+background:rgba(0,0,0,0.7);
+padding:40px;
+max-width:600px;
+}
+
+.hero h1{
+font-size:70px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:24px;
+margin-bottom:25px;
 }
 
 .btn{
 display:inline-block;
 background:#d62828;
 color:white;
-padding:15px 25px;
+padding:15px 30px;
 text-decoration:none;
+margin-right:10px;
 border-radius:5px;
-margin-top:20px;
+font-weight:bold;
 }
 
 .section{
-padding:40px 20px;
+padding:70px 30px;
+text-align:center;
+}
+
+.section h2{
+margin-bottom:40px;
+font-size:40px;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:1200px;
+margin:auto;
 }
 
 .card{
 background:#222;
+border-radius:10px;
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
 padding:20px;
-margin:10px;
+}
+
+.price{
+color:#ff4d4d;
+font-size:24px;
+font-weight:bold;
+margin-top:10px;
+}
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1200px;
+margin:auto;
+}
+
+.info-box{
+background:#222;
+padding:30px;
 border-radius:10px;
 }
-</style>
 
+footer{
+background:#000;
+padding:50px 30px;
+text-align:center;
+}
+
+footer p{
+margin:10px 0;
+}
+</style>
 </head>
 
 <body>
 
-<div class="hero">
+<header>
+<div class="logo">MOZZARELLA PIZZERIA</div>
+
+<nav>
+<a href="#">Hem</a>
+<a href="#">Meny</a>
+<a href="#">Erbjudanden</a>
+<a href="#">Om oss</a>
+<a href="#">Kontakt</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+
 <h1>MOZZARELLA PIZZERIA</h1>
-<p>Pizza • Kebab • Pasta • Hamburgare</p>
-
-<a class="btn" href="#">Beställ online</a>
-</div>
-
-<div class="section">
-<h2>Välkommen</h2>
 
 <p>
-Vi serverar färska pizzor, kebab och pasta
-med snabb leverans och hög kvalitet.
+Pizza • Kebab • Pasta • Hamburgare • Sallader
 </p>
-</div>
 
-<div class="section">
-<h2>Populära rätter</h2>
+<a href="#" class="btn">Beställ Online</a>
+<a href="#" class="btn">Hitta Hit</a>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Våra Populära Rätter</h2>
+
+<div class="menu-grid">
 
 <div class="card">
-Vesuvio – 110 kr
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800">
+<div class="card-content">
+<h3>Vesuvio</h3>
+<p>Skinka, champinjoner</p>
+<div class="price">110 kr</div>
+</div>
 </div>
 
 <div class="card">
-Kebabtallrik – 125 kr
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800">
+<div class="card-content">
+<h3>Ostburgare</h3>
+<p>Bröd, kött, ost, sallad</p>
+<div class="price">115 kr</div>
+</div>
 </div>
 
 <div class="card">
-Pasta Carbonara – 120 kr
+<img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=800">
+<div class="card-content">
+<h3>Kebabtallrik</h3>
+<p>Kebab, pommes, sallad</p>
+<div class="price">125 kr</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800">
+<div class="card-content">
+<h3>Pasta Carbonara</h3>
+<p>Bacon, ägg, parmesan</p>
+<div class="price">120 kr</div>
+</div>
 </div>
 
 </div>
+</section>
 
-<div class="section">
+<section class="section">
+<h2>Varför välja oss?</h2>
+
+<div class="info-grid">
+
+<div class="info-box">
+<h3>Snabb Leverans</h3>
+<p>Vi levererar snabbt i hela Nynäshamn.</p>
+</div>
+
+<div class="info-box">
+<h3>Färska Råvaror</h3>
+<p>Vi använder endast färska råvaror.</p>
+</div>
+
+<div class="info-box">
+<h3>Öppet Alla Dagar</h3>
+<p>11:00 - 22:00</p>
+</div>
+
+<div class="info-box">
+<h3>Säker Betalning</h3>
+<p>Kort, Swish och kontant.</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+
 <h2>Kontakt</h2>
-<p>08-520 15 560</p>
-<p>Nynäsvägen 29, Nynäshamn</p>
-</div>
+
+<p>📞 08-520 15 560</p>
+<p>📍 Nynäsvägen 29, Nynäshamn</p>
+<p>✉ info@mozzarellapizzeria.se</p>
+
+</footer>
 
 </body>
 </html>
